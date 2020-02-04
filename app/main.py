@@ -18,8 +18,8 @@ def handle_connect():
 
 @socketio.on('chat-msg')
 def handle_message(json):
-	print("username:\t" + data["username"])
-	print("message:\t" + data["message"])
+	print("username:\t" + json["username"])
+	print("message:\t" + json["msg"])
 
 if __name__ == "__main__":
 	socketio.run(app)
