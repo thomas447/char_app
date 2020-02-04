@@ -13,11 +13,12 @@ def index():
 
 @socketio.on('connect')
 def handle_connect():
-	print("connected")
+	#print("connected")
 	emit('test', {"data": "this is a message"})
 
 @socketio.on('chat-msg')
 def handle_message(json):
+	print(str(json))
 	emit('update', json, broadcast=True)
 
 if __name__ == "__main__":
