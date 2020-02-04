@@ -14,6 +14,12 @@ def index():
 @socketio.on('connect')
 def handle_connect():
 	print("connected")
+	emit('test', {data: "this is a message"})
+
+@socketio.on('test')
+def handle_test():
+	print("recieved event test")
+	emit('test', {data: "this is a test msg"})
 
 if __name__ == "__main__":
 	socketio.run(app)
