@@ -23,5 +23,7 @@ function sendMessage() {
 		username: username
 	}
 
+	$('#message').val("");
+
 	socket.emit('chat-msg', data);
 }
