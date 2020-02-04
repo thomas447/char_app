@@ -16,10 +16,10 @@ def handle_connect():
 	print("connected")
 	emit('test', {"data": "this is a message"})
 
-@socketio.on('test')
-def handle_test():
-	print("recieved event test")
-	emit('test', {"data": "this is a test msg"})
+@socketio.on('test2')
+def handle_test2(data):
+	print("test2\n" + str(data))
+	return "test2"
 
 if __name__ == "__main__":
 	socketio.run(app)
