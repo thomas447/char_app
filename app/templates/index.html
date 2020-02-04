@@ -19,19 +19,39 @@
 
 		<!-- MAIN CSS -->
 		<link rel="stylesheet" href="{{ url_for('static',filename='CSS/main.css') }}">
-		
+
 	</head>
 	<body>
 		<div class="container-fluid">
 			<div class="row chat-select">
-				<div class="col-3 chat-button">
-					<span>Chat 1</span>
+				<div class="col-4">
+					<div class="chat-button shadow">
+						<span>Chat 1</span>
+					</div>
 				</div>
-				<div class="col-3 chat-button">
-					<span>Chat 2</span>
+				<div class="col-4">
+					<div class="chat-button shadow">
+						<span>Chat 2</span>
+					</div>
 				</div>
-				<div class="col-3 chat-button">
-					<span>Chat 3</span>
+				<div class="col-4">
+					<div class="chat-button shadow">
+						<span>Chat 3</span>
+					</div>
+				</div>
+			</div>
+			<div class="row chat-div">
+				
+			</div>
+			<div class="row chat-input">
+				<div class="col-8">
+					<input type="text" class="col-12">
+				</div>
+				<div class="col-2">
+					<input type="text" class="col-12">
+				</div>
+				<div class="col-2">
+					<button class="btn btn-primary">Send!</button>
 				</div>
 			</div>
 		</div>
