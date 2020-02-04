@@ -9,8 +9,7 @@ socketio = SocketIO(app)
 @app.route('/')
 @app.route('/index')
 def index():
-	#return render_template("index.html")
-	return "hello world"
+	return render_template("index.html")
 
 @socketio.on('connect')
 def handle_connect():
