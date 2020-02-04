@@ -16,10 +16,10 @@ def handle_connect():
 	print("connected")
 	emit('test', {"data": "this is a message"})
 
-@socketio.on('test2')
-def handle_test2(data):
-	print("test2\n" + str(data))
-	return "test2"
+@socketio.on('chat-msg')
+def handle_message(json):
+	print("username:\t" + data["username"])
+	print("message:\t" + data["message"])
 
 if __name__ == "__main__":
 	socketio.run(app)
