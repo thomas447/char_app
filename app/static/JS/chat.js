@@ -23,6 +23,5 @@ function sendMessage() {
 		username: username
 	}
 
-	console.log(data)
 	socket.emit('chat-msg', data);
 }
