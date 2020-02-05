@@ -1,6 +1,6 @@
 var socket;
 
-socket = io();
+socket = io("http://35.196.179.129/socket.io", {secure: true});
 
 socket.on('connect', function() {
 	console.log('I connected');
